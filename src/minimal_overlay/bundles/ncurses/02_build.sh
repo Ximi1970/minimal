@@ -59,9 +59,7 @@ ln -s libtinfow.so.5 libtinfo.so.5
 ln -s libtinfo.so.5 libtinfo.so
 
 echo "Reducing '$BUNDLE_NAME' size."
-set +e
-strip -g $DEST_DIR/usr/bin/*
-set -e
+reduce_size $DEST_DIR/usr/bin
 
 # With '--remove-destination' all possibly existing soft links in
 # '$OVERLAY_ROOTFS' will be overwritten correctly.
