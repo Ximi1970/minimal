@@ -63,6 +63,9 @@ if [ "$OVERLAY_LOCATION" = "rootfs" ] && \
 
   echo "Merging overlay software in rootfs."
 
+  # Copy everything from glibc to the rootfs area.
+  cp -r $GLIBC_INSTALLED/* $ROOTFS
+
   # With '--remove-destination' all possibly existing soft links in
   # $OVERLAY_ROOTFS will be overwritten correctly.
   cp -r --remove-destination \
