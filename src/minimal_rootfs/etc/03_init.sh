@@ -36,10 +36,10 @@
 # exec /sbin/init
 
 # Print first message on screen.
-cat /etc/msg/03_init_01.txt
+#cat /etc/msg/03_init_01.txt
 
 # Wait 5 second or until any keybord key is pressed.
-read -t 5 -n1 -s key
+#read -t 5 -n1 -s key
 
 if [ "$key" = "" ] ; then
   # Use default initialization logic based on configuration in '/etc/inittab'.

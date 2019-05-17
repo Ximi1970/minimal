@@ -63,6 +63,8 @@ DEFAULT_OVERLAY_DIR="/tmp/minimal/overlay"
 DEFAULT_UPPER_DIR="/tmp/minimal/rootfs"
 DEFAULT_WORK_DIR="/tmp/minimal/work"
 
+if 0
+
 echo "Searching available devices for overlay content."
 for DEVICE in /dev/* ; do
   DEV=$(echo "${DEVICE##*/}")
@@ -175,6 +177,8 @@ for DEVICE in /dev/* ; do
   umount $DEVICE_MNT 2>/dev/null
   rm -rf $DEVICE_MNT 2>/dev/null
 done
+
+fi
 
 # Move critical file systems to the new mountpoint.
 mount --move /dev /mnt/dev
