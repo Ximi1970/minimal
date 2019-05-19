@@ -1,5 +1,7 @@
 # Minimal Linux Live
 
+[![Travis Status](https://api.travis-ci.org/Ximi1970/minimal.svg?branch=master)](https://travis-ci.org/Ximi1970/minimal)
+
 * [Overview](#overview)
 * [Current development state](#current-development-state)
 * [Future improvements](#future-improvements)
