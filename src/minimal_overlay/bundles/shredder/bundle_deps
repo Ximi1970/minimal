@@ -1,2 +1,4 @@
 bash
 ncurses
+dialog
+util_linux
