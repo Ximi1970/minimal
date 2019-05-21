@@ -28,6 +28,10 @@ make -j $NUM_JOBS
 echo "Installing '$BUNDLE_NAME'."
 make -j $NUM_JOBS install DESTDIR=$DEST_DIR
 
+#
+cd $DEST_DIR/usr/lib
+ln -s libpcre.so libpcre.so.3
+
 echo "Reducing '$BUNDLE_NAME' size."
 reduce_size $DEST_DIR/usr/bin
 
