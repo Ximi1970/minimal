@@ -65,7 +65,7 @@ sudo apt install wget make gawk gcc bc bison flex xorriso libelf-dev libssl-dev
 sudo apt install libncurses-dev
 
 # Resolve build dependencies for bundle mc
-sudo apt install libglib2.0-dev libffi-dev libslang2-dev
+sudo apt install libglib2.0-dev libffi-dev libslang2-dev libmount-dev
 
 # Build everything and produce ISO image.
 ./build_minimal_linux_live.sh
