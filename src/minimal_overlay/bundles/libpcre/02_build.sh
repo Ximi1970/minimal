@@ -20,7 +20,12 @@ rm -rf $DEST_DIR
 
 echo "Configuring '$BUNDLE_NAME'."
 CFLAGS="$CFLAGS" ./configure \
-    --prefix=/usr
+    --prefix=/usr \
+    --enable-pcre16 \
+    --enable-pcre32 \
+    --enable-utf \
+    --enable-unicode-properties \
+    --enable-newline-is-lf
 
 echo "Building '$BUNDLE_NAME'."
 make -j $NUM_JOBS
