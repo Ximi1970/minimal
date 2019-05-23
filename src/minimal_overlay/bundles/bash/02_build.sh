@@ -21,7 +21,28 @@ rm -rf $DEST_DIR
 echo "Configuring '$BUNDLE_NAME'."
 CFLAGS="$CFLAGS" ./configure \
     --prefix=/usr \
-    LDFLAGS=-L$PWD/lib
+    --with-curses\
+    --with-afs \
+    --with-gnu-ld \
+    --enable-job-control \
+    --enable-net-redirections \
+    --enable-alias \
+    --enable-readline \
+    --enable-history \
+    --enable-bang-history \
+    --enable-directory-stack \
+    --enable-process-substitution \
+    --enable-prompt-string-decoding \
+    --enable-select \
+    --enable-help-builtin \
+    --enable-separate-helpfiles \
+    --enable-array-variables \
+    --enable-brace-expansion \
+    --enable-command-timing \
+    --enable-disabled-builtins \
+    --enable-glob-asciiranges-default \
+    --disable-strict-posix-default \
+    --enable-multibyte
 
 echo "Building '$BUNDLE_NAME'."
 make -j $NUM_JOBS
