@@ -21,7 +21,8 @@ rm -rf $DEST_DIR
 echo "Configuring '$BUNDLE_NAME'."
 CFLAGS="$CFLAGS" ./configure \
     --prefix=/usr \
-    LDFLAGS=-L$DEST_DIR/usr/include
+    CFLAGS="-I$WORK_DIR/overlay/ncurses/ncurses_installed/usr/include $CFLAGS" \
+    LDFLAGS="-L$WORK_DIR/overlay/ncurses/ncurses_installed/usr/lib"
 
 echo "Building '$BUNDLE_NAME'."
 make -j $NUM_JOBS
