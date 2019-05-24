@@ -42,7 +42,9 @@ CFLAGS="$CFLAGS" ./configure \
     --enable-disabled-builtins \
     --enable-glob-asciiranges-default \
     --disable-strict-posix-default \
-    --enable-multibyte
+    --enable-multibyte \
+    CFLAGS="-I$WORK_DIR/overlay/ncurses/ncurses_installed/usr/include $CFLAGS" \
+    LDFLAGS="-L$WORK_DIR/overlay/ncurses/ncurses_installed/usr/lib"
 
 echo "Building '$BUNDLE_NAME'."
 make -j $NUM_JOBS
