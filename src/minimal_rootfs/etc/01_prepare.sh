@@ -36,5 +36,11 @@ mkdir -p /dev/pts
 
 mount -t devpts none /dev/pts
 
+ln -s /proc/self/fd /dev/fd
+ln -s /proc/self/fd/0 /dev/stdin
+ln -s /proc/self/fd/1 /dev/stdout
+ln -s /proc/self/fd/2 /dev/stderr
+ln -s /proc/kcore /dev/core
+
 echo "Mounted all core filesystems. Ready to continue."
 
