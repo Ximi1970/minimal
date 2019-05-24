@@ -20,7 +20,7 @@ rm -rf $DEST_DIR
 
 echo "Configuring 'dialog'."
 CFLAGS="$CFLAGS" ./configure \
-    --prefix=/usr \ 
+    --prefix=/usr \
     CFLAGS="-I$WORK_DIR/overlay/ncurses/ncurses_installed/usr/include" \
     LDFLAGS="-L$WORK_DIR/overlay/ncurses/ncurses_installed/usr/lib"
 
