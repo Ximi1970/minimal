@@ -43,7 +43,7 @@ CFLAGS="$CFLAGS" ./configure \
     --enable-glob-asciiranges-default \
     --disable-strict-posix-default \
     --enable-multibyte \
-    CFLAGS="-I$WORK_DIR/overlay/ncurses/ncurses_installed/usr/include $CFLAGS" \
+    CFLAGS="-I$WORK_DIR/overlay/ncurses/ncurses_installed/usr/include" \
     LDFLAGS="-L$WORK_DIR/overlay/ncurses/ncurses_installed/usr/lib"
 
 echo "Building '$BUNDLE_NAME'."
