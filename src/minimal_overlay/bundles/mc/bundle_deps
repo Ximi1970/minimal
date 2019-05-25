@@ -2,3 +2,4 @@ ncurses
 libslang2
 glib
 libpcre
+glibc_libutil
